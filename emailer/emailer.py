@@ -7,27 +7,15 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 
 ## Import Variables via Files from Directory:
-from emailConfigurationVariables import list_of_receiver_email_addresses, email_username, email_password
-from emailDataVariables import df
+from emailConfigurationVariables import list_of_receiver_email_addresses, email_username, email_password, email_subject, email_body
 
 ## To / From:
 sender = email_username
 receivers = list_of_receiver_email_addresses
 
-## Body:
-body_of_email = """
-<b>Email Header:</b><br>
-Email Text1<br>
-Email Text2<br>
-<br>
-<b>DataFrame:</b><br>
-{0}<br>
-<br>
-""".format(df.to_html())
-
 ## Configuration:
-msg = MIMEText(body_of_email, 'html')
-msg['Subject'] = 'Email Title'
+msg = MIMEText(email_body, 'html')
+msg['Subject'] = email_subject
 msg['From'] = sender
 msg['To'] = ','.join(receivers)
 

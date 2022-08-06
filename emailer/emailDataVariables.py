@@ -2,4 +2,4 @@
 import pandas as pd
 
 example_list = [1, 2, 3]
-df = pd.DataFrame(example_list, columns=['number'])
+email_data = pd.DataFrame(example_list, columns=['count']).to_html()
