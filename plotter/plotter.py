@@ -51,8 +51,6 @@ df.plot(kind='line',
         dashes = [3,3,2,2],
         ax = axis2)
 
-print(df)
-
 ## Plot Grid:
 axis2.grid(True)
 ## Set Plot Legend:
@@ -78,5 +76,3 @@ axis2.axhline(0, color='black')
 # plt.cla()
 # plt.clf()
 plt.show()
-
-
